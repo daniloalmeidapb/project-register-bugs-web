@@ -1,0 +1,33 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:panelGroup rendered="#{not empty projectMB.projects}">
+        <p:dataTable value="#{projectMB.projects}" var="project" rows="5" paginator="true"
+                     paginatorAlwaysVisible="false" paginatorPosition="bottom">
+
+            <p:column headerText="ID">
+                <h:outputText value="#{project.id}"/>
+            </p:column>
+
+            <p:column headerText="Name">
+                <h:outputText value="#{project.name}"/>
+            </p:column>
+
+            <p:column headerText="Description">
+                <h:outputText value="#{project.description}"/>
+            </p:column>
+
+            <p:column style="font-size: 12px; text-align: center">
+                <p:splitButton value="Update" action="#{projectMB.prepareUpdate(project.id)}" process="@this"
+                               update="@form" icon="ui-icon-arrowrefresh-1-w">
+
+                    <p:menuitem value="Delete" action="#{projectMB.delete(project.id)}" process="@this"
+                                update="@form" icon="ui-icon-trash" style="font-size: 12px"/>
+                </p:splitButton>
+            </p:column>
+        </p:dataTable>
+    </h:panelGroup>
+</ui:composition>

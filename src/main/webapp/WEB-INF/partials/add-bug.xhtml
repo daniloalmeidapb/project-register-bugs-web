@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:inputHidden value="#{bugMB.bug.id}"/>
+
+    <h:panelGrid columns="2">
+        <h:outputLabel value="Project:"/>
+        <p:selectOneMenu value="#{bugMB.projectId}" filter="true">
+            <f:selectItem itemLabel="Select One"/>
+            <f:selectItems value="#{projectMB.projects}" var="project"
+                           itemLabel="#{project.name}" itemValue="#{project.id}"/>
+        </p:selectOneMenu>
+
+        <h:outputLabel value="Severity:"/>
+        <p:selectOneMenu value="#{bugMB.bug.severity}">
+            <f:selectItem itemValue="low" itemLabel="Low"/>
+            <f:selectItem itemValue="medium" itemLabel="Medium"/>
+            <f:selectItem itemValue="high" itemLabel="High"/>
+        </p:selectOneMenu>
+
+        <h:outputLabel value="Desciption:"/>
+        <p:inputTextarea value="#{bugMB.bug.description}" cols="40" rows="10"/>
+
+        <p:commandButton value="Save" action="#{bugMB.add}" update="@form" icon="ui-icon-disk"/>
+    </h:panelGrid>
+</ui:composition>

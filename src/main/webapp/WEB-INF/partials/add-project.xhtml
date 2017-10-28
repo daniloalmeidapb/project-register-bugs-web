@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <h:inputHidden value="#{projectMB.project.id}"/>
+
+    <h:panelGrid columns="2">
+        <h:outputLabel value="Name:"/>
+        <p:inputText value="#{projectMB.project.name}"/>
+
+        <h:outputLabel value="Description:"/>
+        <p:inputText value="#{projectMB.project.description}"/>
+
+        <p:commandButton value="Save" action="#{projectMB.add}" update="@form"
+                         process="@all" icon="ui-icon-disk"/>
+    </h:panelGrid>
+</ui:composition>
