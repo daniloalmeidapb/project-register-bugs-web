@@ -3,7 +3,7 @@ Simple project web in java. The system was developed using IDE IntelliJ and the 
 based in JavaServer Faces and with integrated Java Persistence API. I used the Primefaces framework and the implementation
 JPA Hibernate. For the infrastructure component manegement used the CDI(Context and Dependency Injection).
 
-#Course Details
+# Course Details
 <li>JavaServer Faces</li>
 <li>Login Authentication</li>
 <li>Context and Dependency Injection - CDI</li>
