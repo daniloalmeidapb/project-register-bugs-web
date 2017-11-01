@@ -8,13 +8,13 @@
     <ui:define name="content">
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="User:"/>
+                <h:outputLabel value="Usuário:"/>
                 <p:inputText value="#{authenticatorMB.user.username}"/>
 
-                <h:outputLabel value="Password:"/>
+                <h:outputLabel value="Senha:"/>
                 <p:password value="#{authenticatorMB.user.password}"/>
 
-                <p:commandButton value="login" action="#{authenticatorMB.login}" update="@form"/>
+                <p:commandButton value="Entrar" action="#{authenticatorMB.login}" update="@form"/>
             </h:panelGrid>
         </h:form>
     </ui:define>

@@ -7,23 +7,19 @@
     <h:inputHidden value="#{bugMB.bug.id}"/>
 
     <h:panelGrid columns="2">
-        <h:outputLabel value="Project:"/>
+        <h:outputLabel value="Projeto:"/>
         <p:selectOneMenu value="#{bugMB.projectId}" filter="true">
-            <f:selectItem itemLabel="Select One"/>
+            <f:selectItem itemLabel="Selecione"/>
             <f:selectItems value="#{projectMB.projects}" var="project"
                            itemLabel="#{project.name}" itemValue="#{project.id}"/>
         </p:selectOneMenu>
 
-        <h:outputLabel value="Severity:"/>
-        <p:selectOneMenu value="#{bugMB.bug.severity}">
-            <f:selectItem itemValue="low" itemLabel="Low"/>
-            <f:selectItem itemValue="medium" itemLabel="Medium"/>
-            <f:selectItem itemValue="high" itemLabel="High"/>
-        </p:selectOneMenu>
+        <h:outputLabel value="Problema:"/>
+        <p:inputTextarea value="#{bugMB.bug.problem}" cols="40" rows="5"/>
 
-        <h:outputLabel value="Desciption:"/>
-        <p:inputTextarea value="#{bugMB.bug.description}" cols="40" rows="10"/>
+        <h:outputLabel value="Solução:"/>
+        <p:inputTextarea value="#{bugMB.bug.solution}" cols="40" rows="5"/>
 
-        <p:commandButton value="Save" action="#{bugMB.add}" update="@form" icon="ui-icon-disk"/>
+        <p:commandButton value="Salvar" action="#{bugMB.add}" update="@form" icon="ui-icon-disk"/>
     </h:panelGrid>
 </ui:composition>

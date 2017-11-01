@@ -12,19 +12,19 @@
                 <h:outputText value="#{project.id}"/>
             </p:column>
 
-            <p:column headerText="Name">
+            <p:column headerText="Nome">
                 <h:outputText value="#{project.name}"/>
             </p:column>
 
-            <p:column headerText="Description">
+            <p:column headerText="Descrição">
                 <h:outputText value="#{project.description}"/>
             </p:column>
 
             <p:column style="font-size: 12px; text-align: center">
-                <p:splitButton value="Update" action="#{projectMB.prepareUpdate(project.id)}" process="@this"
+                <p:splitButton value="Atualizar" action="#{projectMB.prepareUpdate(project.id)}" process="@this"
                                update="@form" icon="ui-icon-arrowrefresh-1-w">
 
-                    <p:menuitem value="Delete" action="#{projectMB.delete(project.id)}" process="@this"
+                    <p:menuitem value="Excluir" action="#{projectMB.delete(project.id)}" process="@this"
                                 update="@form" icon="ui-icon-trash" style="font-size: 12px"/>
                 </p:splitButton>
             </p:column>

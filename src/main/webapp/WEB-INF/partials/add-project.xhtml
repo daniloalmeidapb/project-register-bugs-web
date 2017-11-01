@@ -6,13 +6,13 @@
     <h:inputHidden value="#{projectMB.project.id}"/>
 
     <h:panelGrid columns="2">
-        <h:outputLabel value="Name:"/>
+        <h:outputLabel value="Nome:"/>
         <p:inputText value="#{projectMB.project.name}"/>
 
-        <h:outputLabel value="Description:"/>
-        <p:inputText value="#{projectMB.project.description}"/>
+        <h:outputLabel value="Descrição:"/>
+        <p:inputTextarea value="#{projectMB.project.description}" cols="40" rows="5"/>
 
-        <p:commandButton value="Save" action="#{projectMB.add}" update="@form"
+        <p:commandButton value="Salvar" action="#{projectMB.add}" update="@form"
                          process="@all" icon="ui-icon-disk"/>
     </h:panelGrid>
 </ui:composition>

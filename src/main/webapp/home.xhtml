@@ -8,7 +8,7 @@
         <p:tabView>
             <p:ajax event="tabChange" update="bugForm"/>
 
-            <p:tab title="Project">
+            <p:tab title="Projeto">
                 <h:form>
                     <ui:include src="WEB-INF/partials/add-project.xhtml"/>
                     <hr/>
@@ -22,6 +22,10 @@
                     <hr/>
                     <ui:include src="WEB-INF/partials/list-bug.xhtml"/>
                 </h:form>
+            </p:tab>
+
+            <p:tab title="Pesquisa">
+
             </p:tab>
         </p:tabView>
     </ui:define>

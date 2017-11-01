@@ -7,8 +7,8 @@ import java.io.Serializable;
 public class Bug implements Serializable {
 
     private Long id;
-    private String description;
-    private String severity;
+    private String problem;
+    private String solution;
     private Project project;
 
     @Id
@@ -20,18 +20,18 @@ public class Bug implements Serializable {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getProblem() {
+        return problem;
     }
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProblem(String description) {
+        this.problem = description;
     }
 
-    public String getSeverity() {
-        return severity;
+    public String getSolution() {
+        return solution;
     }
-    public void setSeverity(String severity) {
-        this.severity = severity;
+    public void setSolution(String severity) {
+        this.solution = severity;
     }
 
     @ManyToOne

@@ -22,6 +22,7 @@ public class Project implements Serializable {
         this.id = id;
     }
 
+    @Column(unique = true)
     public String getName() {
         return name;
     }
