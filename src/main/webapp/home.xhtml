@@ -6,27 +6,28 @@
 
     <ui:define name="content">
         <p:tabView>
-            <p:ajax event="tabChange" update="bugForm"/>
+            <p:ajax event="tabChange" update="bug, search"/>
+                <p:tab title="Projeto">
+                    <h:form>
+                        <ui:include src="WEB-INF/partials/add-project.xhtml"/>
+                        <hr/>
+                        <ui:include src="WEB-INF/partials/list-project.xhtml"/>
+                    </h:form>
+                </p:tab>
 
-            <p:tab title="Projeto">
-                <h:form>
-                    <ui:include src="WEB-INF/partials/add-project.xhtml"/>
-                    <hr/>
-                    <ui:include src="WEB-INF/partials/list-project.xhtml"/>
-                </h:form>
-            </p:tab>
+                <p:tab title="Bug">
+                    <h:form id="bug">
+                        <ui:include src="WEB-INF/partials/add-bug.xhtml"/>
+                        <hr/>
+                        <ui:include src="WEB-INF/partials/list-bug.xhtml"/>
+                    </h:form>
+                </p:tab>
 
-            <p:tab title="Bug">
-                <h:form id="bugForm">
-                    <ui:include src="WEB-INF/partials/add-bug.xhtml"/>
-                    <hr/>
-                    <ui:include src="WEB-INF/partials/list-bug.xhtml"/>
-                </h:form>
-            </p:tab>
+                <p:tab title="Pesquisa">
+                    <h:form id="search">
 
-            <p:tab title="Pesquisa">
-
-            </p:tab>
+                    </h:form>
+                </p:tab>
         </p:tabView>
     </ui:define>
 </ui:composition>
