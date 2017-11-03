@@ -1,4 +1,4 @@
-package br.com.k19.registerBugs.util;
+package br.com.k19.registerBugs.util.jpa;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;

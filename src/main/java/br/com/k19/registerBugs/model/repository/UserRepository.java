@@ -11,7 +11,7 @@ import java.util.List;
 public class UserRepository implements Serializable, Repository<User> {
 
     @Inject
-    private EntityManager manager; // test
+    private EntityManager manager;
 
     @Override
     public void add(User user) {

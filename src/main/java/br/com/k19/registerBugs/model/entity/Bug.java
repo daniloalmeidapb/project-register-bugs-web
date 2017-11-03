@@ -1,5 +1,7 @@
 package br.com.k19.registerBugs.model.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -20,6 +22,7 @@ public class Bug implements Serializable {
         this.id = id;
     }
 
+    @NotEmpty(message = "problema é obrigatório")
     public String getProblem() {
         return problem;
     }
@@ -27,6 +30,7 @@ public class Bug implements Serializable {
         this.problem = description;
     }
 
+    @NotEmpty(message = "solução é obrigatório")
     public String getSolution() {
         return solution;
     }

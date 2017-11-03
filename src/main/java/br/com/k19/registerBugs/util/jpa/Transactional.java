@@ -1,4 +1,4 @@
-package br.com.k19.registerBugs.util;
+package br.com.k19.registerBugs.util.jpa;
 
 import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.ElementType;

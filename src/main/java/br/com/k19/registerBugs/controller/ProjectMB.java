@@ -2,7 +2,7 @@ package br.com.k19.registerBugs.controller;
 
 import br.com.k19.registerBugs.model.entity.Project;
 import br.com.k19.registerBugs.model.repository.ProjectRepository;
-import br.com.k19.registerBugs.util.Transactional;
+import br.com.k19.registerBugs.util.jpa.Transactional;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

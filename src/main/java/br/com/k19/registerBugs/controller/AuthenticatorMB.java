@@ -2,6 +2,7 @@ package br.com.k19.registerBugs.controller;
 
 import br.com.k19.registerBugs.model.entity.User;
 import br.com.k19.registerBugs.model.repository.UserRepository;
+import br.com.k19.registerBugs.util.jsf.FacesUtil;
 
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
@@ -29,8 +30,7 @@ public class AuthenticatorMB implements Serializable {
 
             return "home?faces-redirect=true";
         } else {
-            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "user and/or password invalid", null);
-            context.addMessage(null, message);
+            FacesUtil.addErrorMessage("user and/or password invalid.");
 
             return "login";
         }
