@@ -4,17 +4,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>Ellos Report</title>
+
+    <h:outputStylesheet library="css" name="style.css"/>
 </h:head>
 <h:body>
-    <h1>HEADER</h1>
+    <div id="logged">
+        <h:form rendered="#{not empty sessionScope.user}" >
+            <span style="font-weight: bold;">
+                Usuário: #{authenticatorMB.user.username}
+            </span>
+            <h:commandLink style="float: right; font-weight: bold; color: white;" value="Sair"
+                           action="#{authenticatorMB.logout}"/>
+        </h:form>
+    </div>
+
+    <div id="header">
+        <h:graphicImage library="img" name="logo.png" style="float: left; width: 100px;"/>
+        <div style="clear: both;"></div>
+    </div>
     
     <div id="content">
         <ui:insert name="content">Space to content</ui:insert>
     </div>
     
-    <h1>FOOTER</h1>
+    <div id="footer">
+        &copy; Ellos Connecti. Todos os direitos reservados.
+    </div>
 </h:body>
 </html>

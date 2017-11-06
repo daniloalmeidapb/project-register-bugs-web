@@ -50,20 +50,6 @@ public class ProjectMB implements Serializable {
         return this.projects;
     }
 
-    public List<Project> complete(String query) {
-        List<Project> allProjects = this.projectRepository.getList();
-        List<Project> filterProjects = new ArrayList<>();
-
-        for (int i = 0; i < allProjects.size(); i++) {
-            Project project = allProjects.get(i);
-
-            if (project.getName().toLowerCase().endsWith(query)) {
-                filterProjects.add(project);
-            }
-        }
-        return filterProjects;
-    }
-
     public Project getProject() {
         return project;
     }

@@ -30,7 +30,7 @@ public class AuthenticatorMB implements Serializable {
 
             return "home?faces-redirect=true";
         } else {
-            FacesUtil.addErrorMessage("user and/or password invalid.");
+            FacesUtil.addErrorMessage("usuário e/ou senha inválidos.");
 
             return "login";
         }
@@ -39,7 +39,7 @@ public class AuthenticatorMB implements Serializable {
     public String logout() {
         FacesContext context = FacesContext.getCurrentInstance();
         HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
-        session.getAttribute("user");
+        session.removeAttribute("user");
 
         return "login";
     }
