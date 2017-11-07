@@ -1,2 +1,2 @@
-# project-register-bugs-web
+# Projeto Register bugs Web
 Project web.
