@@ -8,11 +8,11 @@
         <p:dataTable value="#{projectMB.projects}" var="project" rows="5" paginator="true"
                      paginatorAlwaysVisible="false" paginatorPosition="bottom">
 
-            <p:column headerText="ID">
+            <p:column headerText="ID" style="width: 20px;">
                 <h:outputText value="#{project.id}"/>
             </p:column>
 
-            <p:column headerText="Nome">
+            <p:column headerText="Nome" style="width: 300px">
                 <h:outputText value="#{project.name}"/>
             </p:column>
 
@@ -20,7 +20,7 @@
                 <h:outputText value="#{project.description}"/>
             </p:column>
 
-            <p:column style="font-size: 12px; text-align: center">
+            <p:column style="font-size: 12px; text-align: center; width: 120px">
                 <p:splitButton value="Atualizar" action="#{projectMB.prepareUpdate(project.id)}" process="@this"
                                update="@form" icon="ui-icon-arrowrefresh-1-w">
 

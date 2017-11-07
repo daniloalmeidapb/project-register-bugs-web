@@ -28,8 +28,13 @@ public class BugMB implements Serializable {
 
     @Transactional
     public void add() {
-        Project project = this.projectRepository.find(this.projectId);
-        project.getBugs().add(this.bug);
+        Project project = new Project();
+
+        if (this.projectId != null) {
+            project = this.projectRepository.find(this.projectId);
+            this.bug.setProject(project);
+            project.getBugs().add(this.bug);
+        }
 
         if (this.bug.getId() == null) {
             this.projectRepository.add(project);
@@ -37,6 +42,7 @@ public class BugMB implements Serializable {
             this.projectRepository.update(project);
         }
 
+        this.projectId = null;
         this.bug = new Bug();
         this.bugs = null;
     }
