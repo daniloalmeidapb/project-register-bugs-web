@@ -5,6 +5,7 @@ import br.com.k19.registerBugs.model.repository.ProjectRepository;
 import br.com.k19.registerBugs.util.jpa.Transactional;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Named
-@RequestScoped
+@ViewScoped
 public class ProjectMB implements Serializable {
 
     private Project project = new Project();

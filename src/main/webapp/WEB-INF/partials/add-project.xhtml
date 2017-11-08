@@ -8,11 +8,11 @@
     <h:inputHidden value="#{projectMB.project.id}"/>
 
     <h:panelGrid columns="2">
-        <h:outputLabel value="Nome:*"/>
-        <p:inputText value="#{projectMB.project.name}"/>
+        <h:outputLabel value="Nome:*" for="name"/>
+        <p:inputText id="name" value="#{projectMB.project.name}"/>
 
-        <h:outputLabel value="Descrição:*"/>
-        <p:inputTextarea value="#{projectMB.project.description}" cols="40" rows="5"/>
+        <h:outputLabel value="Descrição:*" for="description"/>
+        <p:inputTextarea id="description" value="#{projectMB.project.description}" cols="40" rows="5"/>
 
         <p:commandButton value="Salvar" action="#{projectMB.add}" update="@form"
                          process="@all" icon="ui-icon-disk"/>

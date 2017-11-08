@@ -41,7 +41,7 @@ public class Project implements Serializable {
         this.description = description;
     }
 
-    @OneToMany(cascade = CascadeType.PERSIST, orphanRemoval = true)
+    @OneToMany(orphanRemoval = true, mappedBy = "project")
     public List<Bug> getBugs() {
         return bugs;
     }

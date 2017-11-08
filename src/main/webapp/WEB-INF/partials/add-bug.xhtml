@@ -9,19 +9,19 @@
     <h:inputHidden value="#{bugMB.bug.id}"/>
 
     <h:panelGrid columns="2">
-        <h:outputLabel value="Projeto:*"/>
-        <p:selectOneMenu value="#{bugMB.projectId}" filter="true"
+        <h:outputLabel value="Projeto:*" for="project"/>
+        <p:selectOneMenu id="project" value="#{bugMB.projectId}" filter="true"
                          required="true" requiredMessage="projeto é obrigatório">
             <f:selectItem itemLabel="Selecione"/>
             <f:selectItems value="#{projectMB.projects}" var="project"
                            itemLabel="#{project.name}" itemValue="#{project.id}"/>
         </p:selectOneMenu>
 
-        <h:outputLabel value="Problema:*"/>
-        <p:inputTextarea value="#{bugMB.bug.problem}" cols="40" rows="5"/>
+        <h:outputLabel value="Problema:*" for="problem"/>
+        <p:inputTextarea id="problem" value="#{bugMB.bug.problem}" cols="40" rows="5"/>
 
-        <h:outputLabel value="Solução:*"/>
-        <p:inputTextarea value="#{bugMB.bug.solution}" cols="40" rows="5"/>
+        <h:outputLabel value="Solução:*" for="solution"/>
+        <p:inputTextarea id="solution" value="#{bugMB.bug.solution}" cols="40" rows="5"/>
 
         <p:commandButton value="Salvar" action="#{bugMB.add}" update="@form" icon="ui-icon-disk"/>
     </h:panelGrid>

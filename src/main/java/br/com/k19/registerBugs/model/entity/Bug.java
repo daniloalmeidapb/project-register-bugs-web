@@ -3,6 +3,7 @@ package br.com.k19.registerBugs.model.entity;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
@@ -39,6 +40,8 @@ public class Bug implements Serializable {
     }
 
     @ManyToOne
+    @JoinColumn
+    @NotNull(message = "projeto é obrigatório")
     public Project getProject() {
         return project;
     }

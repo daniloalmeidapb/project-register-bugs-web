@@ -22,6 +22,15 @@
             <p:column headerText="Solução">
                 <h:outputText value="#{bug.solution}"/>
             </p:column>
+
+            <p:column style="font-size: 12px; text-align: center; width: 120px">
+                <p:splitButton value="Atualizar" action="#{bugMB.prepareUpdate(bug.id)}" process="@this"
+                               update="@form" icon="ui-icon-arrowrefresh-1-w">
+
+                    <p:menuitem value="Excluir" action="#{bugMB.delete(bug.id)}" process="@this"
+                                update="@form" icon="ui-icon-trash" style="font-size: 12px"/>
+                </p:splitButton>
+            </p:column>
         </p:dataTable>
     </h:panelGroup>
 </ui:composition>

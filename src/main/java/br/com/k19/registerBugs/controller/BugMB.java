@@ -7,13 +7,14 @@ import br.com.k19.registerBugs.model.repository.ProjectRepository;
 import br.com.k19.registerBugs.util.jpa.Transactional;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
 @Named
-@RequestScoped
+@ViewScoped
 public class BugMB implements Serializable {
 
     private Bug bug = new Bug();
@@ -28,27 +29,25 @@ public class BugMB implements Serializable {
 
     @Transactional
     public void add() {
-        Project project = new Project();
-
         if (this.projectId != null) {
-            project = this.projectRepository.find(this.projectId);
+            Project project = this.projectRepository.find(this.projectId);
             this.bug.setProject(project);
-            project.getBugs().add(this.bug);
         }
 
         if (this.bug.getId() == null) {
-            this.projectRepository.add(project);
+            this.bugRepository.add(this.bug);
         } else {
-            this.projectRepository.update(project);
+            this.bugRepository.update(this.bug);
         }
 
-        this.projectId = null;
         this.bug = new Bug();
+        this.projectId = null;
         this.bugs = null;
     }
 
     public void prepareUpdate(Long id) {
         this.bug = this.bugRepository.find(id);
+        this.projectId = this.bug.getId();
     }
 
     @Transactional
