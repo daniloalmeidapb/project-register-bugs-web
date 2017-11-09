@@ -41,4 +41,12 @@ public class BugRepository implements Serializable, Repository<Bug> {
         TypedQuery<Bug> query = this.manager.createQuery("select x from Bug x", Bug.class);
         return query.getResultList();
     }
+
+    public List<Bug> getFilterList(Long projectId, String filter) {
+        TypedQuery<Bug> query = this.manager.createQuery("select x from Bug x where project.id = :id and problem like :filter", Bug.class);
+        query.setParameter("id", projectId);
+        query.setParameter("filter", "%" + filter + "%");
+
+        return query.getResultList();
+    }
 }

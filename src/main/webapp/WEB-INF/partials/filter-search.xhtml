@@ -4,5 +4,18 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
+    <h:panelGrid columns="3">
+        <h:outputLabel value="Projeto:*" for="project"/>
+        <p:selectOneMenu id="project" value="#{searchMB.projectId}" filter="true" required="true"
+                         requiredMessage="projeto é obrigatório">
+            <f:selectItem itemLabel="Selecione"/>
+            <f:selectItems value="#{projectMB.projects}" var="project"
+                           itemLabel="#{project.name}" itemValue="#{project.id}"/>
+        </p:selectOneMenu>
+        <h:inputHidden/>
 
+        <h:outputLabel value="Filtro:" for="filter"/>
+        <p:inputText id="filter" value="#{searchMB.filter}" style="width: 350px"/>
+        <p:commandButton value="Filtrar" action="#{searchMB.filterList}" update="@form"/>
+    </h:panelGrid>
 </ui:composition>
