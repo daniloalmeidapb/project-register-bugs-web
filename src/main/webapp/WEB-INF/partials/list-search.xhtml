@@ -4,7 +4,6 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <h:panelGrid rendered="#{searchMB.bugs}">
         <p:dataTable value="#{searchMB.bugs}" var="bug" rows="5" paginator="true"
                      paginatorAlwaysVisible="false" paginatorPosition="bottom">
             <p:column headerText="Problema">
@@ -15,5 +14,4 @@
                 <h:outputText value="#{bug.solution}"/>
             </p:column>
         </p:dataTable>
-    </h:panelGrid>
 </ui:composition>
