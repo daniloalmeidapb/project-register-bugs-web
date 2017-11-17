@@ -21,8 +21,6 @@ public class SearchMB implements Serializable {
     private BugRepository bugRepository;
 
     public void filterList() {
-        System.out.println("getFilterList");
-
         this.bugs = this.bugRepository.getFilterList(this.projectId, this.filter);
     }
 
