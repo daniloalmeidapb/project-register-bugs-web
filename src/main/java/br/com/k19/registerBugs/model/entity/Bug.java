@@ -1,5 +1,6 @@
 package br.com.k19.registerBugs.model.entity;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -24,6 +25,7 @@ public class Bug implements Serializable {
     }
 
     @NotEmpty(message = "problema é obrigatório")
+    @Length(min = 5, max = 255)
     public String getProblem() {
         return problem;
     }
@@ -32,6 +34,7 @@ public class Bug implements Serializable {
     }
 
     @NotEmpty(message = "solução é obrigatório")
+    @Length(min = 5, max = 255)
     public String getSolution() {
         return solution;
     }

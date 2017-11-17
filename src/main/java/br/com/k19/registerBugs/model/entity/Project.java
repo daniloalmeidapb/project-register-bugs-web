@@ -1,8 +1,10 @@
 package br.com.k19.registerBugs.model.entity;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +28,7 @@ public class Project implements Serializable {
 
     @Column(unique = true)
     @NotEmpty(message = "nome é obrigatório")
+    @Pattern(regexp = "[a-zA-Z]+\\s*[a-zA-Z]*", message = "nome inválido")
     public String getName() {
         return name;
     }
@@ -34,6 +37,7 @@ public class Project implements Serializable {
     }
 
     @NotEmpty(message = "descrição é obrigatório")
+    @Length(min = 5, max = 255)
     public String getDescription() {
         return description;
     }
