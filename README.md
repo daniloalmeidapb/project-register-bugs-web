@@ -1,2 +1,2 @@
-# Projeto Register bugs Web
+# Projeto Register Bugs Web
 Project web.
