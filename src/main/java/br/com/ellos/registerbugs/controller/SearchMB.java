@@ -1,7 +1,7 @@
-package br.com.k19.registerBugs.controller;
+package br.com.ellos.registerbugs.controller;
 
-import br.com.k19.registerBugs.model.entity.Bug;
-import br.com.k19.registerBugs.model.repository.BugRepository;
+import br.com.ellos.registerbugs.model.entity.Bug;
+import br.com.ellos.registerbugs.model.repository.BugRepository;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

@@ -1,4 +1,4 @@
-package br.com.k19.registerBugs.util.jpa;
+package br.com.ellos.registerbugs.util.jpa;
 
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;

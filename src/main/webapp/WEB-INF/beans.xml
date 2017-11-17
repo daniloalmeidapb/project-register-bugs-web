@@ -7,6 +7,6 @@
         bean-discovery-mode="all">
 
     <interceptors>
-        <class>br.com.k19.registerBugs.util.jpa.TransactionInterceptor</class>
+        <class>br.com.ellos.registerbugs.util.jpa.TransactionInterceptor</class>
     </interceptors>
 </beans>

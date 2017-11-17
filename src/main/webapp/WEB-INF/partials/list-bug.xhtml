@@ -7,11 +7,11 @@
     <h:panelGroup rendered="#{not empty bugMB.bugs}">
         <p:dataTable value="#{bugMB.bugs}" var="bug" rows="5" paginator="true" paginatorAlwaysVisible="false"
                      paginatorPosition="bottom">
-            <p:column headerText="ID">
+            <p:column headerText="ID" style="width: 20px">
                 <h:outputText value="#{bug.id}"/>
             </p:column>
 
-            <p:column headerText="Projeto">
+            <p:column headerText="Projeto" style="width: 300px">
                 <h:outputText value="#{bug.project.name}"/>
             </p:column>
 

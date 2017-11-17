@@ -1,4 +1,4 @@
-package br.com.k19.registerBugs.model.repository;
+package br.com.ellos.registerbugs.model.repository;
 
 import java.util.List;
 

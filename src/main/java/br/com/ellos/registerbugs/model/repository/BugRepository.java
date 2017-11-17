@@ -1,9 +1,7 @@
-package br.com.k19.registerBugs.model.repository;
+package br.com.ellos.registerbugs.model.repository;
 
-import br.com.k19.registerBugs.model.entity.Bug;
+import br.com.ellos.registerbugs.model.entity.Bug;
 
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;

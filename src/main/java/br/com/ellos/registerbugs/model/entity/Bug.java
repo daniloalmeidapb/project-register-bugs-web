@@ -1,4 +1,4 @@
-package br.com.k19.registerBugs.model.entity;
+package br.com.ellos.registerbugs.model.entity;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;

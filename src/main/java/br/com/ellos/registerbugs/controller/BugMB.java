@@ -1,12 +1,11 @@
-package br.com.k19.registerBugs.controller;
+package br.com.ellos.registerbugs.controller;
 
-import br.com.k19.registerBugs.model.entity.Bug;
-import br.com.k19.registerBugs.model.entity.Project;
-import br.com.k19.registerBugs.model.repository.BugRepository;
-import br.com.k19.registerBugs.model.repository.ProjectRepository;
-import br.com.k19.registerBugs.util.jpa.Transactional;
+import br.com.ellos.registerbugs.model.entity.Bug;
+import br.com.ellos.registerbugs.model.entity.Project;
+import br.com.ellos.registerbugs.model.repository.BugRepository;
+import br.com.ellos.registerbugs.model.repository.ProjectRepository;
+import br.com.ellos.registerbugs.util.jpa.Transactional;
 
-import javax.enterprise.context.RequestScoped;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -1,6 +1,6 @@
-package br.com.k19.registerBugs.model.repository;
+package br.com.ellos.registerbugs.model.repository;
 
-import br.com.k19.registerBugs.model.entity.User;
+import br.com.ellos.registerbugs.model.entity.User;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;

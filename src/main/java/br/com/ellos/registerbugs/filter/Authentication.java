@@ -1,4 +1,4 @@
-package br.com.k19.registerBugs.filter;
+package br.com.ellos.registerbugs.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

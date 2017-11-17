@@ -1,11 +1,10 @@
-package br.com.k19.registerBugs.controller;
+package br.com.ellos.registerbugs.controller;
 
-import br.com.k19.registerBugs.model.entity.User;
-import br.com.k19.registerBugs.model.repository.UserRepository;
-import br.com.k19.registerBugs.util.jsf.FacesUtil;
+import br.com.ellos.registerbugs.model.entity.User;
+import br.com.ellos.registerbugs.util.jsf.FacesUtil;
+import br.com.ellos.registerbugs.model.repository.UserRepository;
 
 import javax.enterprise.context.SessionScoped;
-import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
