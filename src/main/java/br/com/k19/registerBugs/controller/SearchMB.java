@@ -3,14 +3,14 @@ package br.com.k19.registerBugs.controller;
 import br.com.k19.registerBugs.model.entity.Bug;
 import br.com.k19.registerBugs.model.repository.BugRepository;
 
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
 @Named
-@ViewScoped
+@RequestScoped
 public class SearchMB implements Serializable {
 
     private Long projectId;
