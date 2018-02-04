@@ -1,4 +1,4 @@
-# Projeto Register Bugs Web
+# Register Bugs Web
 Was developed an application want allows the users registration new projects and bugs, fine as list, update and delete. This application also enables want bugs are associated the projects.
 
 ## Built With
